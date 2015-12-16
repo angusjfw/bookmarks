@@ -1,10 +1,11 @@
 describe 'Bookmark Manager Features' do
-  let(:tag) { [Tag.new(name: 'education')]}
+  let(:tag_edu) { [Tag.new(name: 'education')]}
+  let(:tag_coding) { [Tag.new(name: 'coding')]}
 
   feature 'list of bookmark links' do
     scenario 'user can see a list of links on links page' do
       Link.create(url: 'http://www.makersacademy.com', title: 'Makers Academy',
-                  tags: tag)
+                  tags: tag_edu)
       visit '/links'
       expect(page).to have_selector('ul#links', text: 'Makers Academy') 
     end
@@ -39,6 +40,19 @@ describe 'Bookmark Manager Features' do
       fill_in 'tag', with: 'favourites'
       click_button 'CREATE'
       expect(page).to have_selector('ul#links', text: 'favourites')
+    end
+  end
+
+  feature 'view links by tag' do
+    before do
+      Link.create(url: 'http://www.google.com', title: 'google',
+                  tags: tag_coding)
+      Link.create(url: 'http://www.github.com', title: 'github',
+                  tags: tag_coding)
+    end    
+    scenario 'user can view links by tags assigned to them' do
+      visit '/tags/coding'
+      expect(page).to have_selector('ul#links', text: "Title: google Title: github")
     end
   end
 end
