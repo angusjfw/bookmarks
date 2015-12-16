@@ -7,7 +7,7 @@
       <br>
       URL: <%= link.url %>
       <br>
-      Tag: <%= link.tags.first.name %>
+      Tag: <%= link.tags.first.name  if !!link.tags %>
     </li>
   <% end %>
 </ul>
