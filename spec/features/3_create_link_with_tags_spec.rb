@@ -32,8 +32,7 @@ feature 'creating links with tags' do
     click_button 'CREATE'
 
     link = Link.first
-    expect(link.tags.map(&:name)).to include 'search'
-    expect(link.tags.map(&:name)).to include 'coding'
+    expect(link.tags.map(&:name)).to include('search', 'coding')
   end
 
   scenario 'user creates and views link with multiple tags' do
