@@ -3,14 +3,14 @@
 <ul id='links'>
   <% @links.each do |link| %>
     <li>
-      Title: <%= link.title %>
+      Title: <%= "<a href='#{link.url}'>" + link.title + "</a>" %>
       <br>
       URL: <%= link.url %>
       <br>
       Tags: 
       <% unless link.tags.empty? %>
         <% link.tags.each_with_index do |tag, i| %>
-          <%= tag.name %>
+          <%= "<a href='/tags/#{tag.name}'>" + tag.name + "</a>" %>
         <% end %>
       <% end %>
     </li><br>
