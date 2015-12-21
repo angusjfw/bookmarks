@@ -12,8 +12,8 @@ feature 'filter links by tag' do
     visit '/tags/news'
 
     within 'ul#links' do
-      expect(page).to have_content 'Title: BBC Title: Sky'
-      expect(page).to_not have_content 'Title: Game'
+      expect(page).to have_content 'BBC Sky'
+      expect(page).to_not have_content 'Game'
     end
   end
 end

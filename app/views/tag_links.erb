@@ -1,9 +1,9 @@
-<h1><%= @tag.capitalize %></h1>
+<h1><%= @tag.name.capitalize %></h1>
 
 <ul id='links'>
   <% @links.each do |link| %>
   <li>
-    Title: <%= "<a href='https://#{link.url}'>" + link.title + "</a>" %>
+    <%= "<a href='https://#{link.url}'>" + link.title + "</a>" %>
   </li>
   <% end %>
 </ul>
