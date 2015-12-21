@@ -7,7 +7,12 @@
       <br>
       URL: <%= link.url %>
       <br>
-      Tag: <%= link.tags.first.name %>
+      Tags: 
+      <% unless link.tags.empty? %>
+        <% link.tags.each do |tag| %>
+          <%= tag.name + ' ' %>
+        <% end %>
+      <% end %>
     </li>
   <% end %>
 </ul>

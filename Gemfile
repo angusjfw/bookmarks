@@ -10,4 +10,5 @@ gem 'database_cleaner'
 group :test do
   gem 'rspec'
   gem 'capybara'
+  gem 'byebug'
 end
