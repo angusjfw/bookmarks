@@ -23,7 +23,8 @@ class BookmarkManager < Sinatra::Base
     link = Link.new(url: params[:url], title: params[:title])
     tags = params[:tags].split(', ')
     tags.each do |tag|
-      link.tags << Tag.create(name: tag.downcase)
+      existing = Tag.first(name: tag.downcase)
+      link.tags << (existing ? existing : Tag.create(name: tag.downcase))
     end
     link.save
     redirect '/links'
