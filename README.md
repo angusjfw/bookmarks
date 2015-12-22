@@ -37,7 +37,7 @@ I'd like to sign out.
 
 As a time-pressed user
 So that I can quickly find web sites I recently bookmarked
-I would like to see links in descending chronological order
+I would like to see links in descending chronological order.
 
 As a user,
 So that I can discard unwanted links,
