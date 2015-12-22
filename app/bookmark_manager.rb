@@ -6,6 +6,7 @@ require_relative 'models/link'
 
 class BookmarkManager < Sinatra::Base
   enable :sessions
+  set :session_secret, 'super secret'
 
   helpers do
     def current_user
