@@ -16,3 +16,5 @@ group :development do
   gem 'byebug'
   gem 'rake'
 end
+
+gem 'sinatra-flash', '0.3.0'

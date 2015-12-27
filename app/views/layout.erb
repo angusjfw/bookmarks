@@ -5,8 +5,8 @@
   </head>
 
   <body>
-    <% if current_user %>
-      Welcome, <%= current_user.name %>
+    <% if flash[:notice] %>
+      <div id='notice'><%= flash[:notice] %></div>
     <% end %>
     <%= yield %>  
   </body>

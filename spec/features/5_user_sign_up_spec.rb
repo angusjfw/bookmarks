@@ -19,7 +19,6 @@ feature 'user sign up' do
     fill_in 'confirmation', with: new_password
     
     expect{click_button 'Sign Up'}.to change(User, :count).by 1
-    expect(page).to have_content "Welcome, #{new_user}"
     expect(User.first.email).to eq new_email
   end
 
@@ -27,5 +26,8 @@ feature 'user sign up' do
     fill_in 'confirmation', with: :not_password
 
     expect{click_button 'Sign Up'}.to_not change(User, :count)
+    expect(current_path).to eq('/users')
+    expect(page).to have_content 'Password and password confirmation do not '\
+                                 'match'
   end
 end
