@@ -19,10 +19,7 @@ I'd like to be able to add subject tags to links.
 As a user,
 So that Ican find specific links,
 I'd like to filter links by tags.
-```
 
-Incomplete:
-```
 As a user,
 So that I can start using the bookmark manager,
 I'd like to sign up.
@@ -30,7 +27,10 @@ I'd like to sign up.
 As a user,
 So that I can access my bookmark manager,
 I'd like to sign in.
+```
 
+Incomplete:
+```
 As a user,
 So that I can leave my bookmark manager safely,
 I'd like to sign out.
