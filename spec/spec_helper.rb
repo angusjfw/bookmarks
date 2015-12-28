@@ -3,11 +3,13 @@ ENV['RACK_ENV'] = 'test'
 require 'capybara/rspec'
 require 'database_cleaner'
 require File.join(File.dirname(__FILE__), '..', 'app/bookmark_manager.rb')
-require 'web_helper'
+require 'helpers/session'
 
 Capybara.app = BookmarkManager
 
 RSpec.configure do |config|
+  config.include SessionHelpers
+
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
