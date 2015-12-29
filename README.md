@@ -27,18 +27,18 @@ I'd like to sign up.
 As a user,
 So that I can access my bookmark manager,
 I'd like to sign in.
-```
 
-Incomplete:
-```
 As a user,
 So that I can leave my bookmark manager safely,
 I'd like to sign out.
 
-As a time-pressed user
-So that I can quickly find web sites I recently bookmarked
-I would like to see links in descending chronological order.
+As a user,
+So that I can still access my bookmarks if I forget my password,
+I'd like to be able to reset it securely.
+```
 
+Incomplete:
+```
 As a user,
 So that I can discard unwanted links,
 I'd like to be able to delete links.
